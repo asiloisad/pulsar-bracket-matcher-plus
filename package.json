@@ -1,0 +1,71 @@
+{
+  "name": "bracket-matcher-plus",
+  "description": "Highlight and jump between matching brackets and XML/HTML tags with autocomplete and selection support",
+  "repository": "https://github.com/asiloisad/pulsar-bracket-matcher-plus",
+  "keywords": [
+    "bracket",
+    "matcher",
+    "tag",
+    "autocomplete",
+    "highlight"
+  ],
+  "version": "0.0.0",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.100.0 <2.0.0"
+  },
+  "main": "./lib/main",
+  "configSchema": {
+    "autocompleteBrackets": {
+      "order": 1,
+      "type": "boolean",
+      "default": true,
+      "description": "Autocomplete bracket and quote characters, such as `(` and `)`, and `\"`."
+    },
+    "autocompleteCharacters": {
+      "order": 2,
+      "description": "Autocompleted characters treated as matching pairs, such as `()`, and `{}`.",
+      "type": "array",
+      "default": [
+        "()",
+        "[]",
+        "{}",
+        "\"\"",
+        "''",
+        "``",
+        "“”",
+        "‘’",
+        "«»",
+        "‹›"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "pairsWithExtraNewline": {
+      "order": 3,
+      "description": "Automatically add a newline between the pair when enter is pressed.",
+      "type": "array",
+      "default": [
+        "()",
+        "[]",
+        "{}"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "alwaysSkipClosingPairs": {
+      "order": 4,
+      "type": "boolean",
+      "default": false,
+      "description": "Always skip closing pairs in front of the cursor."
+    },
+    "wrapSelectionsInBrackets": {
+      "order": 5,
+      "type": "boolean",
+      "default": true,
+      "description": "Wrap selected text in brackets or quotes when the editor contains selections and the opening bracket or quote is typed."
+    }
+  }
+}

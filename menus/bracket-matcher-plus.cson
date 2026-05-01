@@ -1,0 +1,16 @@
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Bracket Matcher Plus'
+      'submenu': [
+        { 'label': 'Go To Matching Bracket', 'command': 'bracket-matcher-plus:go-to-matching-bracket' }
+        { 'label': 'Select Inside Brackets', 'command': 'bracket-matcher-plus:select-inside-brackets' }
+        { 'label': 'Remove Brackets From Selection', 'command': 'bracket-matcher-plus:remove-brackets-from-selection' }
+        { 'label': 'Close Current Tag', 'command': 'bracket-matcher-plus:close-tag' }
+        { 'label': 'Remove Matching Brackets', 'command': 'bracket-matcher-plus:remove-matching-brackets' }
+        { 'label': 'Select Matching Brackets', 'command': 'bracket-matcher-plus:select-matching-brackets' }
+      ]
+    ]
+  }
+]
