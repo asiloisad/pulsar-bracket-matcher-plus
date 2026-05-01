@@ -14,6 +14,7 @@ Fork of [bracket-matcher](https://github.com/pulsar-edit/pulsar/tree/master/pack
 - **Selection wrapping**: Wraps selected text in brackets when an opening bracket is typed.
 - **Extra newline**: Inserts an extra indented line between a bracket pair on Enter.
 - **Syntax tree support**: Uses tree-sitter for accurate matching when available.
+- **Universal editor support**: Works in all registered text editors, not just workspace panes.
 
 ## Installation
 
