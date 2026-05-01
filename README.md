@@ -2,7 +2,7 @@
 
 Highlight and jump between matching brackets and XML/HTML tags with autocomplete and selection support.
 
-Fork of [bracket-matcher](https://github.com/pulsar-edit/pulsar).
+Fork of [bracket-matcher](https://github.com/pulsar-edit/pulsar/tree/master/packages/bracket-matcher).
 
 ## Features
 
