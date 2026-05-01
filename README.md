@@ -40,7 +40,7 @@ The bracket highlight style can be adjusted in the `styles.less` file:
 
 ```less
 .bracket-matcher-plus .region {
-  border-bottom-color: @syntax-color-keyword;
+  border-bottom-color: red !important;
 }
 ```
 
