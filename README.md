@@ -13,7 +13,6 @@ Fork of [bracket-matcher](https://github.com/pulsar-edit/pulsar/tree/master/pack
 - **Pair backspace**: Deletes both brackets of a pair on backspace.
 - **Selection wrapping**: Wraps selected text in brackets when an opening bracket is typed.
 - **Extra newline**: Inserts an extra indented line between a bracket pair on Enter.
-- **Line number highlight**: Optionally highlights the gutter line number of the matching bracket.
 - **Syntax tree support**: Uses tree-sitter for accurate matching when available.
 
 ## Installation
@@ -31,6 +30,23 @@ Commands available in `atom-text-editor`:
 - `bracket-matcher-plus:remove-brackets-from-selection`: remove the wrapping brackets from the selection,
 - `bracket-matcher-plus:remove-matching-brackets`: remove the bracket pair adjacent to the cursor,
 - `bracket-matcher-plus:close-tag`: insert a closing XML/HTML tag for the nearest unclosed tag.
+
+## Scoped settings
+
+Scope-specific overrides can be added to your `config.cson` and take precedence over both package defaults and global settings. This is useful for per-language bracket rules.
+
+```cson
+".source.rust":
+  "bracket-matcher-plus":
+    autocompleteCharacters: [
+      "()"
+      "[]"
+      "{}"
+      "<>"
+      "\"\""
+      "``"
+    ]
+```
 
 ## Customization
 
