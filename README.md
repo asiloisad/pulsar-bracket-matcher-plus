@@ -15,6 +15,7 @@ Fork of [bracket-matcher](https://github.com/pulsar-edit/pulsar/tree/master/pack
 - **Extra newline**: Inserts an extra indented line between a bracket pair on Enter.
 - **Syntax tree support**: Uses tree-sitter for accurate matching when available.
 - **Universal editor support**: Works in all registered text editors, not just workspace panes.
+- **Scrollbar integration**: Exposes matched bracket positions via a service API, enabling [scrollmap-brackets](https://github.com/asiloisad/pulsar-scrollmap-brackets) to display them on the scrollbar.
 
 ## Installation
 
@@ -60,6 +61,38 @@ The bracket highlight style can be adjusted in the `styles.less` file:
   border-bottom-color: red !important;
 }
 ```
+
+## Provided Service `bracketMatcherPlus`
+
+Exposes the currently highlighted bracket pair for any registered text editor. Useful for packages that need to know which brackets are matched at the cursor position.
+
+In your `package.json`:
+
+```json
+{
+  "consumedServices": {
+    "bracketMatcherPlus": {
+      "versions": {
+        "1.0.0": "consumeBracketMatcherPlus"
+      }
+    }
+  }
+}
+```
+
+In your main module:
+
+```javascript
+consumeBracketMatcherPlus(service) {
+  this.bracketService = service;
+  return new Disposable(() => { this.bracketService = null; });
+}
+```
+
+The service object exposes two methods:
+
+- `getMatchRanges(editor)`: returns `{ range1, range2 }` with the buffer ranges of the currently highlighted bracket pair, or `null` when no pair is highlighted.
+- `observe(callback)`: subscribes to match changes. The `callback(editor, ranges)` is called whenever the highlighted pair changes for any editor, with `ranges` being the same value as `getMatchRanges(editor)`. Returns a `Disposable`.
 
 ## Contributing
 
