@@ -19,7 +19,7 @@ Fork of [bracket-matcher](https://github.com/pulsar-edit/pulsar/tree/master/pack
 
 ## Installation
 
-To install `bracket-matcher-plus` search for [bracket-matcher-plus](https://web.pulsar-edit.dev/packages/bracket-matcher-plus) in the Install pane of the Pulsar settings or run `ppm install bracket-matcher-plus`. Alternatively, you can run `ppm install asiloisad/pulsar-bracket-matcher-plus` to install a package directly from the GitHub repository.
+To install `bracket-matcher-plus` search for [bracket-matcher-plus](https://web.pulsar-edit.dev/packages/bracket-matcher-plus) in the Install pane of the Pulsar settings or run `ppm install bracket-matcher-plus`. Alternatively, you can run `ppm install asiloisad-pulsar/bracket-matcher-plus` to install a package directly from the GitHub repository.
 
 ## Commands
 
