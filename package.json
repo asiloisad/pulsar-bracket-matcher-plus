@@ -1,7 +1,7 @@
 {
   "name": "bracket-matcher-plus",
   "description": "Highlight and jump between matching brackets and XML/HTML tags with autocomplete and selection support",
-  "repository": "https://github.com/asiloisad/pulsar-bracket-matcher-plus",
+  "repository": "https://github.com/asiloisad-pulsar/bracket-matcher-plus",
   "keywords": [
     "bracket",
     "matcher",
